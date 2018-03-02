@@ -1,0 +1,24 @@
+﻿<Properties StartupConfiguration="{E666B63F-5089-DC13-204A-B8963770A0D1}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameManager/TimeMgr.cs">
+    <Files>
+      <File FileName="Assets/Script/Connst/AppConst.cs" Line="3" Column="19" />
+      <File FileName="Assets/Script/GameManager/GameManager.cs" Line="16" Column="35" />
+      <File FileName="Assets/3RD/XLua/Src/LuaEnv.cs" Line="239" Column="25" />
+      <File FileName="Assets/Script/Helper/AudioHelper.cs" Line="35" Column="23" />
+      <File FileName="Assets/Script/Helper/BaseHelper.cs" Line="71" Column="9" />
+      <File FileName="Assets/Script/GameManager/LuaMgr.cs" Line="27" Column="94" />
+      <File FileName="Assets/Script/GameManager/SoundMgr.cs" Line="6" Column="51" />
+      <File FileName="Assets/Script/GameManager/SenceMgr.cs" Line="6" Column="51" />
+      <File FileName="Assets/Script/GameManager/ResourcesMgr.cs" Line="6" Column="59" />
+      <File FileName="Assets/Script/GameManager/UIManager.cs" Line="7" Column="53" />
+      <File FileName="Assets/Script/GameManager/TimeMgr.cs" Line="5" Column="10" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.HeroDemo__0.0.0.0 PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

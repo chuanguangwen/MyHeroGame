@@ -1,0 +1,1 @@
+CS.UnityEngine.Debug.Log("Debug lua in Loader")

@@ -40,8 +40,8 @@ MonoBehaviour:
     y: 437
     width: 815
     height: 583
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -144,10 +144,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 1020
-  m_MinSize: {x: 917, y: 271}
-  m_MaxSize: {x: 22012, y: 10021}
+  m_MinSize: {x: 915, y: 271}
+  m_MaxSize: {x: 22010, y: 10021}
   vertical: 0
-  controlID: 126
+  controlID: 95
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -166,8 +166,8 @@ MonoBehaviour:
     y: 0
     width: 815
     height: 437
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -191,8 +191,8 @@ MonoBehaviour:
     y: 0
     width: 202
     height: 1020
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -284,7 +284,7 @@ MonoBehaviour:
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
   vertical: 0
-  controlID: 103
+  controlID: 96
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -425,18 +425,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/3RD
+    - Assets/Script/GameManager
   m_ViewMode: 0
   m_StartGridSize: 82
   m_LastFolders: []
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: /Users/chuanguangwen/Documents/project/GitProject/HeroDemo/HeroDemo/HeroDemo_0.0.0.0
+  m_LastProjectPath: /Users/chuanguangwen/Documents/GitHub/MyHeroGame
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 38330000
     m_LastClickedID: 13112
-    m_ExpandedIDs: 3c34000040340000523400006c340000743400007834000092340000963400009a3400009e340000aa340000b0340000bc340000f034000046350000483500004a3500004c350000
+    m_ExpandedIDs: 00000000e8290000ec290000f42900000c2a00000e2a0000162a0000202a0000242a00003e2a0000462a00004a2a0000562a00005c2a0000682a00006e2a0000862a0000a02a0000062b0000082b00000a2b00000c2b00000e2b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -461,24 +461,24 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_AssetTreeState:
-    scrollPos: {x: 0, y: 15}
+    scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000003c34000040340000523400006c340000743400007834000092340000963400009a3400009e340000aa340000b0340000c0340000c8340000f034000046350000483500004a3500004c3500007c370000
+    m_ExpandedIDs: 00000000e8290000ec290000f42900000c2a00000e2a0000162a0000202a0000242a00003e2a0000462a00004a2a0000562a0000682a00006e2a0000762a0000862a0000a02a0000062b0000082b00000a2b00000c2b00000e2b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: EventMgr
+      m_OriginalName: EventMgr
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 11370
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
@@ -580,9 +580,9 @@ MonoBehaviour:
     height: 999
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: b0340000
-    m_LastClickedID: 0
-    m_ExpandedIDs: eafafffff4ffffff00000000
+    m_SelectedIDs: 4452ffff
+    m_LastClickedID: -44476
+    m_ExpandedIDs: 1afcfffff4ffffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

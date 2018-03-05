@@ -4,7 +4,7 @@ using UnityEngine;
 using Code.Core;
 namespace GManager
 {
-    public class UIManager : SingLetonMono<UIManager>
+    public class UIMgr : ManagerBase<UIMgr>
     {
 
         // Use this for initialization

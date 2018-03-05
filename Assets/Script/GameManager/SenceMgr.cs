@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Code.Core;
 namespace GManager{
-    public class SenceMgr : SingLetonMono<SenceMgr> {
+    public class SenceMgr : ManagerBase<SenceMgr> {
 
 		// Use this for initialization
 		void Start () {

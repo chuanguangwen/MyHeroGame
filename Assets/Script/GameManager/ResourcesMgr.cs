@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Code.Core;
 namespace GManager{
-    public class ResourcesMgr : SingLetonMono<ResourcesMgr>{
+    public class ResourcesMgr : ManagerBase<ResourcesMgr>{
 		// Use this for initialization
 		void Start () {
 			

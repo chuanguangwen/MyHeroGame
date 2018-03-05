@@ -1,14 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Code.Core;
 using XLua;
 using System.IO;
+using Code.Core;
 namespace GManager
 {
 
-    public class LuaMgr : SingLetonMono<LuaMgr>
-    {
+    public class LuaMgr : ManagerBase<LuaMgr>{
         public static LuaEnv luaenv = new LuaEnv();
         // Use this for initialization
         void Start()

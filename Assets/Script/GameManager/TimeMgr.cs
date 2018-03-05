@@ -4,12 +4,17 @@ using UnityEngine;
 using Code.Core;
 namespace GManager
 {
-    public class TimeMgr : SingLetonMono<TimeMgr>
+    public class TimerMgr : ManagerBase<TimerMgr>
     {
         /// <summary>
         /// 时间定时器缩放
         /// </summary>
-        public float timerScale = 1f;
+        private float m_TimerScale = 1f;
+        public float timerScale{
+            get{
+                return m_TimerScale;
+            }
+        }
         /// <summary>
         /// 定时器字典
         /// </summary>
@@ -91,7 +96,7 @@ namespace GManager
         public void SetScaleTimer( float scale = 1f)
         {
             scale = Mathf.Max(0, scale);
-            this.timerScale = scale;
+            this.m_TimerScale = scale;
         }
         ////////////////////////
         /// -----------------------------------------------------------------------------
@@ -214,7 +219,7 @@ namespace GManager
             /// </summary>
             private object[] m_parames = null;
 
-            private TimeMgr m_Manger;
+            private TimerMgr m_Manger;
 
             /// -----------------------------------------------------------------------------
             /// <summary>
@@ -246,7 +251,7 @@ namespace GManager
             {
                 get
                 {
-                    return Mathf.Max(0.0f, m_duration - (Time.time - m_StartTime) * TimeMgr.getInstance.timerScale);
+                    return Mathf.Max(0.0f, m_duration - (Time.time - m_StartTime) * TimerMgr.getInstance.timerScale);
                 }
             }
 
@@ -265,7 +270,7 @@ namespace GManager
                 m_duration = duration;
                 m_TimerEvent = handler;
                 m_parames = args;
-                m_Manger = TimeMgr.getInstance;
+                m_Manger = TimerMgr.getInstance;
             }
 
             /// -----------------------------------------------------------------------------

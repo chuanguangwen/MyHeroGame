@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Code.Core;
 namespace GManager{
-    public class SoundMgr : SingLetonMono<SoundMgr> {
+    public class SoundMgr : ManagerBase<SoundMgr> {
 
 		// Use this for initialization
 		void Start () {

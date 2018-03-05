@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio for Mac
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyHeroGame", "MyHeroGame.csproj", "{955511BA-E1A7-15A0-068D-2C3659DDE065}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyHeroGame.Editor", "MyHeroGame.Editor.csproj", "{4816541B-1997-3F0A-5255-089272BEADB0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{955511BA-E1A7-15A0-068D-2C3659DDE065}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{955511BA-E1A7-15A0-068D-2C3659DDE065}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{955511BA-E1A7-15A0-068D-2C3659DDE065}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{955511BA-E1A7-15A0-068D-2C3659DDE065}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4816541B-1997-3F0A-5255-089272BEADB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4816541B-1997-3F0A-5255-089272BEADB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4816541B-1997-3F0A-5255-089272BEADB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4816541B-1997-3F0A-5255-089272BEADB0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

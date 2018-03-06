@@ -8,28 +8,51 @@ namespace GManager
 {
 
     public class LuaMgr : ManagerBase<LuaMgr>{
-        public static LuaEnv luaenv = new LuaEnv();
+        LuaEnv luaenv = null;
         // Use this for initialization
+        void Awake()
+        {
+        }
+
         void Start()
         {
-            //Debug.Log(Application.dataPath);
-            //string url = GManager.AppConst.luaDataurl + "Boot";
-            //Debug.Log(url);
+            luaenv = new LuaEnv();
+        }
+        void Update()
+        {
+            if (luaenv != null)
+            {
+                luaenv.Tick();
+            }
+        }
+
+        void OnDestroy()
+        {
+            luaenv.Dispose();
+        }
+
+        public void InitStart()
+        {
+            luaenv.DoString("require 'lua/main'");
+        }
 
 
-            //string fileAddress = System.IO.Path.Combine(GManager.AppConst.luaDataurl, "Boot.lua");
-            ////Debug.Log(fileAddress);
-            ////StreamReader r = new StreamReader(fileAddress);
-            ////LuaManager.luaenv.DoString( r.ReadToEnd());
-
-            //int pos = url.IndexOf('/');
-            //LuaMgr.luaenv.DoString(url.Substring(0, pos) , Path.GetFileName("Boot"));  最终没对
+        public object[] DoFile(string filename)
+        {
+            return null;
         }
 
         // Update is called once per frame
-        void Update()
+        public object[] CallFunction(string funcName, params object[] args)
         {
-
+            return null;
         }
+        public void Close()
+        {
+        }
+        /// <summary>
+        /// 清理内存
+        /// </summary>
+        public void LuaGC() { }
     }
 }

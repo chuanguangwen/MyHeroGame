@@ -555,8 +555,9 @@
     <Compile Include="Assets\Script\GameManager\SoundMgr.cs" />
     <Compile Include="Assets\Script\GameManager\TimeMgr.cs" />
     <Compile Include="Assets\Script\GameManager\UIMgr.cs" />
-    <Compile Include="Assets\Script\Helper\AudioHelper.cs" />
-    <Compile Include="Assets\Script\Helper\BaseHelper.cs" />
+    <Compile Include="Assets\Script\Utility\Log.cs" />
+    <Compile Include="Assets\Script\Utility\ResDownloader.cs" />
+    <Compile Include="Assets\Script\Utility\Util.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\3RD\JsonDotNet\ReadMe.txt" />

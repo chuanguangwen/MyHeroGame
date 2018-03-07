@@ -1,4 +1,17 @@
-﻿using System.Collections;
+﻿#if UNITY_EDITOR
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using Code.Core;
+    using System;
+    using UObject = UnityEngine.Object;
+namespace GManager {
+    public class ResourcesMgr : ManagerBase<ResourcesMgr> {
+
+    }
+}
+#elif ASYNC_MODE
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Code.Core;
@@ -221,3 +234,5 @@ namespace GManager
         }
     }
 }
+#else
+#endif

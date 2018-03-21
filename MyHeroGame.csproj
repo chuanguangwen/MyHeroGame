@@ -515,6 +515,8 @@
     <Compile Include="Assets\3RD\Protobuf\protobuf-net\ServiceModel\XmlProtoSerializer.cs" />
     <Compile Include="Assets\3RD\Protobuf\protobuf-net\SubItemToken.cs" />
     <Compile Include="Assets\3RD\Protobuf\protobuf-net\WireType.cs" />
+    <Compile Include="Assets\3RD\UGUI\ScrollLoop\ScrollCell.cs" />
+    <Compile Include="Assets\3RD\UGUI\ScrollLoop\ScrollLoopController.cs" />
     <Compile Include="Assets\3RD\XLua\Src\CodeEmit.cs" />
     <Compile Include="Assets\3RD\XLua\Src\CopyByValue.cs" />
     <Compile Include="Assets\3RD\XLua\Src\DelegateBridge.cs" />

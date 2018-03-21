@@ -1,11 +1,17 @@
 ﻿<Properties StartupConfiguration="{955511BA-E1A7-15A0-068D-2C3659DDE065}|">
   <MonoDevelop.Ide.ItemProperties.MyHeroGame PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameManager/ResourcesMgr.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/Core/EventScope.cs">
     <Files>
       <File FileName="Assets/Script/GameManager/ResourcesMgr.cs" Line="10" Column="9" />
       <File FileName="Assets/Script/GameManager/GameMgr.cs" Line="7" Column="38" />
       <File FileName="Assets/Script/Connst/AppConst.cs" Line="19" Column="25" />
+      <File FileName="Assets/Script/Core/SingLetonMono.cs" Line="26" Column="24" />
+      <File FileName="Assets/Script/AppBootStrap.cs" Line="17" Column="31" />
+      <File FileName="Assets/Script/Core/ManagerBase.cs" Line="26" Column="39" />
+      <File FileName="Assets/Script/Core/Controller.cs" Line="17" Column="44" />
+      <File FileName="Assets/Script/Core/DelegateObjList.cs" Line="14" Column="57" />
+      <File FileName="Assets/Script/Core/EventScope.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

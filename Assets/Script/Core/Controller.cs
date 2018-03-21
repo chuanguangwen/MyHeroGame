@@ -8,13 +8,13 @@ namespace Code.Core
         public static void StarUp(object[] args)
         {
             /// 初始化管理器
-            var game = GameMgr.getInstance;  //加载管理器
-            var res = ResourcesMgr.getInstance;  //加载管理器
-            var sound = SoundMgr.getInstance;    //声音管理器
-            var sencem = SenceMgr.getInstance;   //场景管理器
-            var lua = LuaMgr.getInstance;        //lua管理器
-            var ui = UIMgr.getInstance;      //ui管理器
-            var time = TimerMgr.getInstance;      //时间管理器
+            GameMgr.Create();  //加载管理器
+            ResourcesMgr.Create();  //加载管理器
+            SoundMgr.Create();    //声音管理器
+            SenceMgr.Create();   //场景管理器
+            LuaMgr.Create();        //lua管理器
+            UIMgr.Create();      //ui管理器
+            TimerMgr.Create();      //时间管理器
         }
 
         private static IController instance;

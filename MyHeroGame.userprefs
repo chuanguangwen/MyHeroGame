@@ -3,7 +3,9 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameManager/ResourcesMgr.cs">
     <Files>
-      <File FileName="Assets/Script/GameManager/ResourcesMgr.cs" Line="36" Column="65" />
+      <File FileName="Assets/Script/GameManager/ResourcesMgr.cs" Line="10" Column="9" />
+      <File FileName="Assets/Script/GameManager/GameMgr.cs" Line="7" Column="38" />
+      <File FileName="Assets/Script/Connst/AppConst.cs" Line="19" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

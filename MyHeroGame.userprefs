@@ -3,7 +3,7 @@
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/GameManager/ResourcesMgr.cs">
     <Files>
-      <File FileName="Assets/Script/GameManager/ResourcesMgr.cs" Line="13" Column="23" />
+      <File FileName="Assets/Script/GameManager/ResourcesMgr.cs" Line="11" Column="30" />
       <File FileName="Assets/Script/GameManager/GameMgr.cs" Line="7" Column="22" />
       <File FileName="Assets/Script/Connst/AppConst.cs" Line="19" Column="25" />
       <File FileName="Assets/Script/Core/SingLetonMono.cs" Line="26" Column="24" />

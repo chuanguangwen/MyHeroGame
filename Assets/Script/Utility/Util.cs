@@ -51,6 +51,57 @@ public class Util
         TimeSpan ts = new TimeSpan(DateTime.UtcNow.Ticks - new DateTime(1970, 1, 1, 0, 0, 0).Ticks);
         return (long)ts.TotalMilliseconds;
     }
+    /// <summary>
+    /// 添加子物体对象
+    /// </summary>
+    public static GameObject AddChild(Transform parent, GameObject obj) {
+        if (parent != null) {
+            GameObject go = GameObject.Instantiate(obj) as GameObject;
+            go.transform.parent = parent;
+            go.transform.localPosition = Vector3.zero;
+            go.transform.localRotation = Quaternion.identity;
+            go.transform.localScale = Vector3.one;
+            return go;
+        }
+        return null;
+    }
+    /// <summary>
+    /// 添加子物体对象
+    /// </summary>
+    public static T AddChild<T>(Transform parent, GameObject obj) where T : Component {
+        if (parent != null) {
+            GameObject go = AddChild(parent, obj);
+            return Add<T>(go);
+        }
+        return null;
+    }
+
+    /// <summary>
+    /// 添加子物体空对象
+    /// </summary>
+    public static GameObject AddNoneChild(Transform parent, string subnode = "clone") {
+        if (parent != null) {
+            GameObject go = new GameObject();
+            go.name = subnode;
+            go.transform.parent = parent;
+            go.transform.localPosition = Vector3.zero;
+            go.transform.localRotation = Quaternion.identity;
+            go.transform.localScale = Vector3.one;
+            return go;
+        }
+        return null;
+    }
+    /// <summary>
+    /// 添加子物体空对象
+    /// </summary>
+    public static T AddNoneChild<T>(Transform parent, string subnode = "clone") where T : Component {
+        if (parent != null) {
+            GameObject go = AddNoneChild(parent, subnode);
+            return Add<T>(go);
+        }
+        return null;
+    }
+
 
     /// <summary>
     /// 搜索子物体组件-GameObject版
@@ -127,6 +178,29 @@ public class Util
         Transform tran = go.Find(subnode);
         if (tran == null) return null;
         return tran.gameObject;
+    }
+    /// <summary>
+    /// 深度查找子对象
+    /// </summary>
+    /// <param name="go"></param>
+    /// <param name="subnode"></param>
+    /// <returns></returns>
+    public static GameObject DepthFindChild(GameObject go, string subnode) {
+        return DepthFindChild(go.transform, subnode);
+    }
+    /// <summary>
+    /// 深度查找子对象
+    /// </summary>
+    /// <param name="go"></param>
+    /// <param name="subnode"></param>
+    /// <returns></returns>
+    public static GameObject DepthFindChild(Transform go, string subnode) {
+        foreach(Transform t in go.GetComponentsInChildren<Transform>()) {
+            if (t.name == subnode) {
+                return t.gameObject;
+            }
+        }
+        return null;
     }
 
     /// <summary>

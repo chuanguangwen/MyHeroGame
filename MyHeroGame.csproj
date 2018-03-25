@@ -515,8 +515,6 @@
     <Compile Include="Assets\3RD\Protobuf\protobuf-net\ServiceModel\XmlProtoSerializer.cs" />
     <Compile Include="Assets\3RD\Protobuf\protobuf-net\SubItemToken.cs" />
     <Compile Include="Assets\3RD\Protobuf\protobuf-net\WireType.cs" />
-    <Compile Include="Assets\3RD\UGUI\ScrollLoop\ScrollCell.cs" />
-    <Compile Include="Assets\3RD\UGUI\ScrollLoop\ScrollLoopController.cs" />
     <Compile Include="Assets\3RD\XLua\Src\CodeEmit.cs" />
     <Compile Include="Assets\3RD\XLua\Src\CopyByValue.cs" />
     <Compile Include="Assets\3RD\XLua\Src\DelegateBridge.cs" />
@@ -541,11 +539,13 @@
     <Compile Include="Assets\3RD\XLua\Src\Utils.cs" />
     <Compile Include="Assets\Script\AppBootStrap.cs" />
     <Compile Include="Assets\Script\Connst\AppConst.cs" />
+    <Compile Include="Assets\Script\Connst\EnumConst.cs" />
     <Compile Include="Assets\Script\Connst\GameConst.cs" />
     <Compile Include="Assets\Script\Core\Controller.cs" />
     <Compile Include="Assets\Script\Core\DelegateObjList.cs" />
     <Compile Include="Assets\Script\Core\Eventer.cs" />
     <Compile Include="Assets\Script\Core\EventScope.cs" />
+    <Compile Include="Assets\Script\Core\EventX.cs" />
     <Compile Include="Assets\Script\Core\ManagerBase.cs" />
     <Compile Include="Assets\Script\Core\MonoBehaviourX.cs" />
     <Compile Include="Assets\Script\Core\SingLetonMono.cs" />
@@ -556,9 +556,20 @@
     <Compile Include="Assets\Script\GameManager\SenceMgr.cs" />
     <Compile Include="Assets\Script\GameManager\SoundMgr.cs" />
     <Compile Include="Assets\Script\GameManager\TimeMgr.cs" />
+    <Compile Include="Assets\Script\GameManager\UIContextMgr.cs" />
     <Compile Include="Assets\Script\GameManager\UIMgr.cs" />
+    <Compile Include="Assets\Script\UGUITools\ScrollLoopController.cs" />
+    <Compile Include="Assets\Script\UI\Base\EventTriggerListener.cs" />
+    <Compile Include="Assets\Script\UI\Base\Item\UIitemContextBase.cs" />
+    <Compile Include="Assets\Script\UI\Base\UIContextBase.cs" />
+    <Compile Include="Assets\Script\UI\Base\UIViewBase.cs" />
+    <Compile Include="Assets\Script\UI\Control\MainPanelCnt.cs" />
+    <Compile Include="Assets\Script\UI\Control\PItemcontrol.cs" />
+    <Compile Include="Assets\Script\UI\View\MainPanelView.cs" />
+    <Compile Include="Assets\Script\UI\View\Pitemview.cs" />
     <Compile Include="Assets\Script\Utility\Log.cs" />
     <Compile Include="Assets\Script\Utility\ResDownloader.cs" />
+    <Compile Include="Assets\Script\Utility\UITools.cs" />
     <Compile Include="Assets\Script\Utility\Util.cs" />
   </ItemGroup>
   <ItemGroup>

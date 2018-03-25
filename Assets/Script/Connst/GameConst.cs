@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameConst {
+    public const int SCREEN_WIDTH = 128;
+    public const int SCREEN_HEIGHT = 96;
     /// <summary>
     /// Controller层消息通知
     /// </summary>

@@ -21,7 +21,7 @@ public class AppConst
     public static int GameFrameRate = 60 ; //游戏帧率
 	public static int TimeInterval = 1;
 
-    public static int LogLevel = Log.NONE; //输出层级
+    public static int LogLevel = Log.DEBUG; //输出层级
     public static string luaDataurl = Application.dataPath + "/../Data/LuaScript/";
 
 

@@ -163,6 +163,7 @@
     <Compile Include="Assets\3RD\XLua\Src\Editor\Hotfix.cs" />
     <Compile Include="Assets\3RD\XLua\Src\Editor\LinkXmlGen\LinkXmlGen.cs" />
     <Compile Include="Assets\3RD\XLua\Src\Editor\TemplateRef.cs" />
+    <Compile Include="Assets\Script\Editor\EditorTools.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\3RD\JsonDotNet\ReadMe.txt" />

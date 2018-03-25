@@ -1,4 +1,73 @@
-﻿#if UNITY_EDITOR     using System.Collections;     using System.Collections.Generic;     using UnityEngine;     using UnityEditor;     using Code.Core;     using System;     using UObject = UnityEngine.Object; namespace GManager {     public class ResourcesMgr : ManagerBase<ResourcesMgr> {         public string a = "";         static string[] editorExts = new string[]{             ".prefab",             ".jpg",             ".png",             ".ttf",              };          static public UnityEngine.Object EditorLoad(string url)         {             string _url = url.Split('.')[0];             foreach (var ext in editorExts)             {                  string path = string.Format("Assets/Assetbundle/{0}{1}", _url, ext);                 UnityEngine.Object obj = AssetDatabase.LoadAssetAtPath(path, typeof(UnityEngine.Object));                 if (obj == null)                 {                     obj = Resources.Load(_url);                 }                 if (obj)                 {                     return obj;                 }             }             return null;         }          public void LoadPrefab(string abName, string assetName, ParametricMethod func)         {             List<UObject> result = new List<UObject>();             UObject go = EditorLoad(assetName);             if (go != null) result.Add(go);             if (func != null) func(result.ToArray());         }          public void LoadPrefab(string abName, string[] assetNames, ParametricMethod func)         {             List<UObject> result = new List<UObject>();             for (int i = 0; i < assetNames.Length; i++)             {                 UObject go = EditorLoad(assetNames[i]);                 if (go != null) result.Add(go);             }             if (func != null) func(result.ToArray());         }       } } 
+﻿#if UNITY_EDITOR
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEditor;
+    using Code.Core;
+    using System;
+    using UObject = UnityEngine.Object;
+namespace GManager {
+    public class ResourcesMgr : ManagerBase<ResourcesMgr> {
+        public string a = "";
+        static string[] editorExts = new string[]{
+            ".prefab",
+            ".jpg",
+            ".png",
+            ".ttf",
+
+            };
+
+        static public UnityEngine.Object EditorLoad(string url)
+        {
+            string _url = url.Split('.')[0];
+            foreach (var ext in editorExts)
+            {
+
+                string path = string.Format("Assets/Assetbundle/{0}{1}", _url, ext);
+                UnityEngine.Object obj = AssetDatabase.LoadAssetAtPath(path, typeof(UnityEngine.Object));
+                if (obj == null)
+                {
+                    obj = Resources.Load(_url);
+                }
+                if (obj)
+                {
+                    return obj;
+                }
+            }
+            Log.Error(string.Format("Obj Is Null . Path = {0}", url));
+            return null;
+        }
+
+        public UnityEngine.Object[] LoadUIPrefab(string assetName, ParametricMethod func = null) {
+            return this.LoadPrefab("uiassetbundle", assetName, func);
+
+        }
+
+        public UnityEngine.Object[] LoadPrefab(string abName, string assetName, ParametricMethod func)
+        {
+            List<UObject> result = new List<UObject>();
+            UObject go = EditorLoad(assetName);
+            if (go != null) result.Add(go);
+            if (func != null) func(result.ToArray());
+            return result.ToArray();
+        }
+
+        public UnityEngine.Object[] LoadPrefab(string abName, string[] assetNames, ParametricMethod func)
+        {
+            List<UObject> result = new List<UObject>();
+            for (int i = 0; i < assetNames.Length; i++)
+            {
+                UObject go = EditorLoad(assetNames[i]);
+                if (go != null) result.Add(go);
+            }
+            if (func != null) func(result.ToArray());
+            return result.ToArray();
+        }
+
+
+    }
+}
+
 #elif ASYNC_MODE
 using System.Collections;
 using System.Collections.Generic;
@@ -62,7 +131,30 @@ namespace GManager
             }
             Debug.LogError("GetRealAssetPath Error:>>" + abName);
             return null;
-        }                  public void LoadPrefab(string abName, string assetName, ParametricMethod func)         {             List<UObject> result = new List<UObject>();             UObject go = LoadAsset<UObject>(abName, assetName);             if (go != null) result.Add(go);             if (func != null) func(result.ToArray());         }          public void LoadPrefab(string abName, string[] assetNames, ParametricMethod func)         {             abName = abName.ToLower();             List<UObject> result = new List<UObject>();             for (int i = 0; i < assetNames.Length; i++)             {                 UObject go = LoadAsset<UObject>(abName, assetNames[i]);                 if (go != null) result.Add(go);             }             if (func != null) func(result.ToArray());         } 
+        }
+        
+        public UnityEngine.Object[] LoadPrefab(string abName, string assetName, ParametricMethod func = null)
+        {
+            List<UObject> result = new List<UObject>();
+            UObject go = LoadAsset<UObject>(abName, assetName);
+            if (go != null) result.Add(go);
+            if (func != null) func(result.ToArray());
+            return result.ToArray();
+        }
+
+        public UnityEngine.Object[] LoadPrefab(string abName, string[] assetNames, ParametricMethod func = null)
+        {
+            abName = abName.ToLower();
+            List<UObject> result = new List<UObject>();
+            for (int i = 0; i < assetNames.Length; i++)
+            {
+                UObject go = LoadAsset<UObject>(abName, assetNames[i]);
+                if (go != null) result.Add(go);
+            }
+            if (func != null) func(result.ToArray());
+            return result.ToArray();
+        }
+
         //载入素材
         void LoadAsset<T>(string abName , string[] assetNames, Action<UObject[]> action = null) where T : UObject {
             abName = GetRealAssetPath(abName);
@@ -265,8 +357,17 @@ namespace GManager
             AssetBundle bundle = LoadAssetBundle(abname);
             return bundle.LoadAsset<T>(assetname);
         }
-         public void LoadPrefab(string abName, string assetName, ParametricMethod func)         {             List<UObject> result = new List<UObject>();             UObject go = LoadAsset<UObject>(abName, assetName);             if (go != null) result.Add(go);             if (func != null) func(result.ToArray());         } 
-        public void LoadPrefab(string abName, string[] assetNames, ParametricMethod func)
+
+        public UnityEngine.Object[] LoadPrefab(string abName, string assetName, ParametricMethod func = null)
+        {
+            List<UObject> result = new List<UObject>();
+            UObject go = LoadAsset<UObject>(abName, assetName);
+            if (go != null) result.Add(go);
+            if (func != null) func(result.ToArray());
+            return result.ToArray();
+        }
+
+        public UnityEngine.Object[] LoadPrefab(string abName, string[] assetNames, ParametricMethod func = null)
         {
             abName = abName.ToLower();
             List<UObject> result = new List<UObject>();
@@ -276,6 +377,7 @@ namespace GManager
                 if (go != null) result.Add(go);
             }
             if (func != null) func(result.ToArray());
+            return result.ToArray();
         }
 
         /// <summary>

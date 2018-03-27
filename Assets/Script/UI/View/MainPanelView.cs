@@ -15,6 +15,6 @@ public class MainPanelView : UIViewBase {
             data.Add(i);
         }
 
-        UITools.CreatScrollLoopControlser(this._context , go , data , 8 , 2 , "Pitemview" , "PItemcontrol",scrollPath);
+		UITools.CreatScrollLoopControlser(this._context , go , data , 170 , 100 , 2 , "Pitemview" , "PItemcontrol",scrollPath);
     }
 }

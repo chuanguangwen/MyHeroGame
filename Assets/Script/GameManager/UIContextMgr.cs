@@ -44,8 +44,7 @@ namespace GManager {
         /// <param name=""></param>
         /// <returns></returns>
         public UIitemContextBase AddChild(UIContextBase parent, Transform parentObj, string path , string panelname , string panelcnt) {
-            Assembly assembly = Assembly.GetExecutingAssembly(); // 获取当前程序集 
-            UIitemContextBase context =(UIitemContextBase)assembly.CreateInstance(panelcnt, true, BindingFlags.CreateInstance, null, new object[] { panelname, path , parent }, null, null); //通过制定类完全限定名，动态获取对象实例
+            UIitemContextBase context = Util.InstantiationClass<UIitemContextBase>(panelcnt, new object[] { panelname, path, parent });
             GameObject go = UIMgr.getInstance.GetUIViewObj(context.uiType , parentObj);
             context.InitView(go);
             return context;

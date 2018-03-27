@@ -30,8 +30,8 @@ public class UIContextBase : EventX {
     public virtual void InitView(GameObject go) {
         this.gameObject = go;
         this.transform = go.transform;
-        Assembly assembly = Assembly.GetExecutingAssembly(); // 获取当前程序集 
-        this.viewBase = (UIViewBase)assembly.CreateInstance(this.m_panelname, true, BindingFlags.CreateInstance, null, new object[] { this, go },null , null); //通过制定类完全限定名，动态获取对象实例
+        this.viewBase = Util.InstantiationClass<UIViewBase>(this.m_panelname, new object[] { this, go });
+
         this.viewBase.OnEnter();
         this.OnEnter();
     }

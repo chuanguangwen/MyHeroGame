@@ -29,7 +29,7 @@ public class UIitemContextBase : UIContextBase {
         get { return dataObject; }
         set {
             dataObject = value;
-            configureCellData();
+            ConfigureCellData();
         }
     }
     private ScrollLoopController controller;
@@ -39,13 +39,13 @@ public class UIitemContextBase : UIContextBase {
 
     public virtual void Init(ScrollLoopController controller, System.Object data, int index) {
         this.controller = controller;
-        dataObject = data;
+		this.DataObject = data;
         dataIndex = index;
-    }
+	}
+
     #endregion
     public virtual void Init(System.Object datas) {
         this.DataObject = datas;
     }
-
-    public virtual void configureCellData() { }
+    public virtual void ConfigureCellData() { }
 }

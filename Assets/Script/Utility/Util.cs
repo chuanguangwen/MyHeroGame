@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
 using GManager;
+using System.Reflection;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -51,6 +52,15 @@ public class Util
         TimeSpan ts = new TimeSpan(DateTime.UtcNow.Ticks - new DateTime(1970, 1, 1, 0, 0, 0).Ticks);
         return (long)ts.TotalMilliseconds;
     }
+    /// <summary>
+    /// 更具字符串实例化类型
+    /// </summary>
+    public static T InstantiationClass<T>(string classname , object[] args) where T : class {
+        Assembly assembly = Assembly.GetExecutingAssembly(); // 获取当前程序集 
+        T t = (T)assembly.CreateInstance(classname, true, BindingFlags.CreateInstance, null, args , null, null); //通过制定类完全限定名，动态获取对象实例
+        return t;
+    }
+
     /// <summary>
     /// 添加子物体对象
     /// </summary>
@@ -200,6 +210,7 @@ public class Util
                 return t.gameObject;
             }
         }
+		Log.Error(string.Format("Find Chlid is null . Parent's Name = {0} , Tager Name = {1}", go.name , subnode)); 
         return null;
     }
 

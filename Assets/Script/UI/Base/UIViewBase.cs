@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
-using Code.Core;
 public class UIViewBase : EventX{
     protected GameObject gameObject;
     protected Transform transform; 
@@ -18,7 +17,7 @@ public class UIViewBase : EventX{
         this._uiType = cnt.uiType;
     }
 
-    public void OnDestroy() {
+	public override void OnDestroy() {
         base.OnDestroy();
         this.OnExit();
     }
@@ -49,8 +48,16 @@ public class UIViewBase : EventX{
     }
 
     protected GameObject GetObjectForName(string name) {
-        GameObject go = null;
-        
-        return go;
+		GameObject go = Util.DepthFindChild(this.gameObject , name) as GameObject;
+		return go;
     }
+
+	protected T GetGetComponentOnobj<T>(string name) where T : Component{
+		GameObject go = this.GetObjectForName (name);
+		T com = go.GetComponent<T> ();
+		if (com == null) {
+			Log.Error (string.Format ("Object {0} is havent on {1] Component!!!", name, typeof(T)));
+		}
+		return com;
+	}
 }

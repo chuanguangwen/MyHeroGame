@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PItemcontrol : UIitemContextBase {
     public PItemcontrol(string panelname, string path, UIContextBase parent) : base(panelname,path,parent){
-        
     }
     private Pitemview view
     {
@@ -14,9 +13,8 @@ public class PItemcontrol : UIitemContextBase {
         }
     }
 
-    public override void Init(ScrollLoopController controller, System.Object data, int index)
-    {
-        base.Init(controller , data , index);
-        Log.Debug(data , data.GetType());
-    }
+	public override void ConfigureCellData ()
+	{
+		this.view.SetShowNumber (this.DataObject.ToString());
+	}
 }
